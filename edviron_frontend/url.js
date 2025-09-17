@@ -1,1 +1,1 @@
-export let global_url = 'http://localhost:8000';
+export let global_url = '${process.env.GLOBAL_BASE_URL}';

@@ -14,7 +14,7 @@ function Signup() {
 
         try {
             const response = await axios({
-                url: `http://localhost:8000/api/auth/signup`,
+                url: `${process.env.GLOBAL_BASE_URL}/api/auth/signup`,
                 method: "POST",
                 data: {
                     email,

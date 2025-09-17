@@ -40,7 +40,7 @@ function TransactionOverview() {
       setLoading(true);
       try {
          const response = await axios({
-            url: `http://localhost:8000/api/transactions?skip=${skip}&limit=${limit}&sort=${sort}&order=${order}`,
+            url: `${process.env.GLOBAL_BASE_URL}/api/transactions?skip=${skip}&limit=${limit}&sort=${sort}&order=${order}`,
             method: "GET",
             headers,
          });

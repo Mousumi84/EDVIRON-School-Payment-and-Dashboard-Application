@@ -24,7 +24,7 @@ export function Dashboard() {
     const logoutClick = async () => {
         try {
             const response = await axios({
-                url: `http://localhost:8000/api/auth/logout`,
+                url: `${process.env.GLOBAL_BASE_URL}/api/auth/logout`,
                 method: "POST",
                 headers
             });

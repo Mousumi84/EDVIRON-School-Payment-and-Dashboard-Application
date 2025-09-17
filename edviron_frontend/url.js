@@ -1,0 +1,1 @@
+export let global_url = 'http://localhost:8000';

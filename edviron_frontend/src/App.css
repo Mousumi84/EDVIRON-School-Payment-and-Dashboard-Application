@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+}
+
+.even-row {
+  background-color: #ffffff;
+}
+
+.odd-row {
+  background-color: #fafafa;
+}
+
+.custom-row:hover {
+  background-color: #dfdfdf; 
+  transform: scale(1.01); 
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}

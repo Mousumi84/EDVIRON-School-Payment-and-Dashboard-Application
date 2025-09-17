@@ -30,7 +30,10 @@ const store = new mongoDbsession({
 
 
 //--------Middlewares----------------
-app.use(cors());
+app.use(cors({
+    origin: "https://edviron-school-payment-and-dashboar.vercel.app",
+    credentials: true
+}));
 app.use(morgan("dev"));
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
@@ -50,6 +53,12 @@ app.use('/api/payment',PaymentRouter);
 app.use('/api/',WebhookRouter); 
 app.use('/api/',TransactionRouter);
 
+app.get("/",(req,res) => {
+    res.send({
+        activStatus: true,
+        error: false,
+    })
+})
 
 //--------Listener----------------
 app.listen(PORT,() => {

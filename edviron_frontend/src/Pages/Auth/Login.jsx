@@ -14,9 +14,10 @@ function Login() {
         console.log(e);
         const { email, password } = e;
 
+
         try {
             const response = await axios({
-                url: `${process.env.GLOBAL_BASE_URL}/api/auth/login`,
+                url: `${process.env.REACT_APP_API_URL}/api/auth/login`,
                 method: "POST",
                 data: {
                     email,

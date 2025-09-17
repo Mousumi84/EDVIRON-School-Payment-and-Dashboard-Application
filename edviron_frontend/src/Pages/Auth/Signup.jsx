@@ -14,7 +14,7 @@ function Signup() {
 
         try {
             const response = await axios({
-                url: `${process.env.GLOBAL_BASE_URL}/api/auth/signup`,
+                url: `${process.env.REACT_APP_API_URL}/api/auth/signup`,
                 method: "POST",
                 data: {
                     email,

@@ -30,7 +30,7 @@ function TransactionDetailsSchool() {
       setTransactions([]);
       try {
          const response = await axios({
-            url: `${process.env.GLOBAL_BASE_URL}/api/transactions/school/${schoolId}`,
+            url: `${process.env.REACT_APP_API_URL}/api/transactions/school/${schoolId}`,
             method: "GET",
             headers,
          });

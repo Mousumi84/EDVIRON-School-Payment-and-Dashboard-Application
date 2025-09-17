@@ -1,1 +1,1 @@
-export let global_url = '${process.env.GLOBAL_BASE_URL}';
+export let global_url = '${process.env.REACT_APP_API_URL}';

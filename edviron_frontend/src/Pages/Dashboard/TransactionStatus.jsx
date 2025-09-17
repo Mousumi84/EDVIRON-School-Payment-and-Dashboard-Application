@@ -21,7 +21,7 @@ function TransactionStatus() {
       setTransactionStatus(null);
       try {
          const response = await axios({
-            url: `${process.env.GLOBAL_BASE_URL}/api/transaction-status/${customId}`,
+            url: `${process.env.REACT_APP_API_URL}/api/transaction-status/${customId}`,
             method: "GET",
             headers,
          });
